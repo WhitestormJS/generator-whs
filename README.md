@@ -50,7 +50,7 @@
     - **libs** folder contains additional scripts that your plugin depends for testing. 
     - **assets** - additional images/models/sounds, etc.
     
-![](http://i.imgur.com/JHlnr34.png)
+![](http://i.imgur.com/1m8kNtR.png)
 
 ### INSTRUCTION: Publishing
 As your **package.json** file is complete and plugin is written - you can publish it to [NPM](http://npmjs.com/).
