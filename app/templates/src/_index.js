@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import {Shape, extend, Loop} from 'whitestormjs';
 import * as Physijs from 'whitestormjs/physics/index';
 
-class MyCustomMesh extends Shape {
+class <%= component %> extends Shape {
   constructor(params = {}) {
     super(params, 'sphere');
 
@@ -63,10 +63,10 @@ class MyCustomMesh extends Shape {
   }
 
   clone() {
-    return new MyCustomMesh(this.params).copy(this);
+    return new <%= component %>(this.params).copy(this);
   }
 }
 
 export {
-  MyCustomMesh as default
+  <%= component %> as default
 };

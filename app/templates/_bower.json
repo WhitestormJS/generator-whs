@@ -1,0 +1,14 @@
+{
+  "name": "<%= name %>",
+  "description": "<%= description %>",
+  "main": "build/<%= filename %>",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "node_modules",
+    "src",
+    "lib",
+    "examples",
+  ]
+}

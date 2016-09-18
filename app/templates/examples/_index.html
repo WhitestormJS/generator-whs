@@ -6,7 +6,7 @@
   </head>
   <body>
     <script src="./vendor/whitestorm.js"></script>
-    <script src="./build/whs-plugin.js"></script>
+    <script src="./build/<%= filename %>"></script>
     <script type="text/javascript">
     const GAME = new WHS.World({
       stats: 'fps', // fps, ms, mb
@@ -25,7 +25,7 @@
       }
     });
 
-    const custom = new WHS.MyCustomMesh({
+    const custom = new WHS.<%= component %>({
       geometry: {
         radius: 3
       },

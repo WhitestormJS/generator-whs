@@ -6,14 +6,14 @@ process.env.BABEL_ENV = 'browser';
 export function config({isProduction, pluginSrc, pluginDest}) {
   console.log(isProduction ? 'Production mode' : 'Development mode');
 
-  return { // PHYSICS VERSION
+  return {
     devtool: isProduction ? false : 'source-map',
     entry: `${pluginSrc}/index.js`,
     target: 'web',
     output: {
       path: path.join(__dirname, pluginDest),
-      filename: 'whs-plugin.js',
-      library: ['WHS', 'MyCustomMesh'],
+      filename: '<%= filename %>',
+      library: ['WHS', '<%= component %>'],
       libraryTarget: 'umd'
     },
     externals: {

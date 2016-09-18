@@ -1,37 +1,25 @@
 {
-  "name": "whs-plugin",
-  "version": "1.0.8",
-  "description": "Simple whitestormjs plugin",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "gulp src:build",
-    "dev": "gulp dev"
+  "name": "generator-whs-plugin",
+  "version": "0.1.0",
+  "description": "Yeoman generator for Whitestorm.js plugin",
+  "main": "app/index.js",
+  "keywords": [
+    "yeoman-generator",
+    "whitestormjs",
+    "plugin"
+  ],
+  "dependencies": {
+    "lodash": "^4.15.0",
+    "yeoman-generator": "^0.24.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WhitestormJS/whitestorm.js.git"
+    "url": "git+https://github.com/WhitestormJS/whs-plugin.js.git"
   },
-  "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-runtime": "^6.9.0",
-    "babel-polyfill": "^6.13.0",
-    "babel-preset-es2015": "^6.6.0",
-    "babel-preset-stage-1": "^6.5.0",
-    "babel-register": "^6.8.0",
-    "del": "^2.2.0",
-    "express": "^4.14.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-cached": "^1.1.0",
-    "gulp-load-plugins": "^1.2.2",
-    "gulp-util": "^3.0.7",
-    "path": "^0.12.7",
-    "serve-index": "^1.8.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-middleware": "^1.7.0",
-    "webpack-dev-server": "^1.14.1",
-    "whitestormjs": "^0.12.0-dev.1"
-  }
+  "author": "Alexander Buzin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WhitestormJS/whs-plugin.js/issues"
+  },
+  "homepage": "https://github.com/WhitestormJS/whs-plugin.js#readme"
 }
