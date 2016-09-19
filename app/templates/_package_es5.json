@@ -7,6 +7,9 @@
     "build": "gulp src:build",
     "dev": "gulp dev"
   },
+  "keywords": [
+    "whs-plugin"
+  ],
   "devDependencies": {
     "del": "^2.2.0",
     "express": "^4.14.0",

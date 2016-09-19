@@ -7,9 +7,9 @@ module.exports = generators.Base.extend({
       type    : 'input',
       name    : 'name',
       message : 'Your Whitestorm.js Plugin name',
-      default : 'whs-plugin',
+      default : 'whs-plugin-myName',
       validate: function (input) {
-      	return input.indexOf('whs-') === 0 ? true : 'Plugin name should start from \'whs-\'';
+      	return input.indexOf('whs-plugin-') === 0 ? true : 'Plugin name should start with \'whs-plugin-\'';
       }
     },
     {
@@ -22,7 +22,7 @@ module.exports = generators.Base.extend({
       name    : 'filename',
       message : 'Name of a file that will be generated and used as a plugin',
       default : function (answers) {
-      	return answers.name + '.js' || 'whs-plugin.js'
+      	return answers.name + '.js' || 'whs-plugin-myName.js'
       }
     },
     {

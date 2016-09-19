@@ -7,6 +7,9 @@
     "build": "gulp src:build",
     "dev": "gulp dev"
   },
+  "keywords": [
+    "whs-plugin"
+  ],
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-loader": "^6.2.4",
