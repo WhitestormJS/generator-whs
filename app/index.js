@@ -58,6 +58,12 @@ module.exports = generators.Base.extend({
 	      name    : 'bower',
 	      message : 'Use bower?',
 	      default : 'false'
+	    },
+	    {
+	      type    : 'confirm',
+	      name    : 'serve',
+	      message : 'Will you use gh-pages/etc. to serve examples?',
+	      default : 'true'
 	    }]).then(function (answers) {
 	    	this.props = answers;
 	    	done();
@@ -117,7 +123,8 @@ module.exports = generators.Base.extend({
 	        name: this.props.name,
 	        filename: this.props.filename,
 	        description: this.props.description,
-	        component: this.props.component
+	        component: this.props.component,
+	        serve: this.props.serve
 	      }
 	    );
 	  }.bind(this));
