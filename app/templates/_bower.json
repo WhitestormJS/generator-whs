@@ -5,6 +5,9 @@
   "moduleType": [
     "globals"
   ],
+  "keywords": [
+    "whs-<%= type %>"
+  ],
   "ignore": [
     "node_modules",
     "src",

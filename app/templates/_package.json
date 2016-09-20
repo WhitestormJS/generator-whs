@@ -8,7 +8,7 @@
     "dev": "gulp dev"
   },
   "keywords": [
-    "whs-plugin"
+    "whs-<%= type %>"
   ],
   "devDependencies": {
     "babel": "^6.5.2",
