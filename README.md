@@ -45,3 +45,7 @@ This command runs development mode where you can make changes in sources and all
 
 Removes all files from **build/** and **lib/**
 
+#### `gulp vendor`
+
+If you are using [Github pages](https://pages.github.com/) or other deploy service to run examples/showcase of a plugin - This command will be useful: it copies `whitestorm.js` file from **node_modules/.../** to **vendor/** folder.
+
