@@ -1,6 +1,6 @@
 {
   "name": "generator-whs-plugin",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Yeoman generator for Whitestorm.js plugin",
   "main": "app/index.js",
   "keywords": [
