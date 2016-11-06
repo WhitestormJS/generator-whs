@@ -61,7 +61,7 @@ gulp.task('dev', function () {
   server.get('*', serveIndex(path.resolve(__dirname, examplesDest), { icons: true }));
 
   server.get('/vendor/whitestorm.js', function (req, res) {
-    res.sendFile(path.resolve(__dirname, './node_modules/whitestormjs/build/whitestorm.js'));
+    res.sendFile(path.resolve(__dirname, './node_modules/whs/build/whitestorm.js'));
   });
 
   server.listen(8080, 'localhost', function () {});
@@ -76,7 +76,7 @@ gulp.task('build:clean', function (callback) {
 <% if (serve) { %>
 // VENDOR
 gulp.task('vendor', (callback) => {
-  gulp.src('./node_modules/whitestormjs/build/whitestorm.js')
+  gulp.src('./node_modules/whs/build/whitestorm.js')
     .pipe(gulp.dest('./vendor/'));
 });
 <% } %>

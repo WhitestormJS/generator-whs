@@ -8,7 +8,7 @@
     <script src="../vendor/whitestorm.js"></script>
     <script src="../build/<%= filename %>"></script>
     <script type="text/javascript">
-    const GAME = new WHS.World({
+    const world = new WHS.World({
       stats: 'fps', // fps, ms, mb
       autoresize: "window",
 
@@ -32,14 +32,10 @@
 
       mass: 10,
 
-      pos: {
-        x: 0,
-        y: 100,
-        z: 0
-      }
+      position: [0, 100, 0]
     });
 
-    custom.addTo(GAME);
+    custom.addTo(world);
     custom.run();
 
     new WHS.SpotLight({
@@ -49,16 +45,16 @@
         intensity: 2
       },
 
-      pos: {
+      position: {
         z: 10
       }
-    }).addTo(GAME);
+    }).addTo(world);
 
     new WHS.AmbientLight({
       light: {
         intensity: 0.3
       }
-    }).addTo(GAME);
+    }).addTo(world);
 
     new WHS.SpotLight({
       light: {
@@ -67,10 +63,10 @@
         intensity: 2
       },
 
-      pos: {
+      position: {
         z: -10
       }
-    }).addTo(GAME);
+    }).addTo(world);
 
     const plane = new WHS.Plane({
       geometry: {
@@ -85,21 +81,15 @@
         kind: 'basic'
       },
 
-      pos: {
-        x: 0,
-        y: 0,
-        z: 0
-      },
-
-      rot: {
+      rotation: {
         x: -Math.PI / 2
       }
     });
 
-    GAME.add(plane);
-    GAME.start();
+    plane.addTo(world);
+    world.start();
 
-    GAME.setControls(WHS.orbitControls());
+    world.setControls(new WHS.OrbitControls());
 
     </script>
   </body>
