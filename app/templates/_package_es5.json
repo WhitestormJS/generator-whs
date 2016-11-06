@@ -4,7 +4,9 @@
   "description": "<%= description %>",
   "main": "src/index.js",
   "scripts": {
-    "build": "gulp src:build",
+    "preversion": "set NODE_ENV=production & gulp build",
+    "postversion": "set NODE_ENV=development",
+    "build": "gulp build",
     "dev": "gulp dev"
   },
   "keywords": [
