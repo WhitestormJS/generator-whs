@@ -1,23 +1,28 @@
 var THREE = require('three');
-var WHS = require('whitestormjs');
-var Physijs = require('whitestormjs/physics/index');
+var WHS = require('whs');
+var Physijs = require('whs/lib/physics/index');
 
 function <%= component %>(params) {
   var params = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
-  WHS.Shape.call(this, params, 'sphere');
-
-  WHS.extend(params.geometry, {
-    radius: 1,
-    segmentA: 32,
-    segmentB: 32
-  });
+  WHS.Component.call(this, params, <%= component %>.defaults, <%= component %>.instructions);
 
   this.build(params);
   this.wrap();
 }
 
-<%= component %>.prototype = Object.create(WHS.Shape.prototype);
+<%= component %>.defaults = {
+  geometry: {
+    radius: 1,
+    segmentA: 32,
+    segmentB: 32  
+  }
+};
+
+<%= component %>.prototype = Object.create(WHS.Component.prototype);
+
+WHS.MeshComponent(<%= component %>);
+WHS.PhysicsComponent(<%= component %>);
 
 <%= component %>.prototype.build = function(params) {
   var params = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];

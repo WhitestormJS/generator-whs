@@ -1,16 +1,20 @@
 import * as THREE from 'three';
-import {Shape, extend, Loop} from 'whitestormjs';
-import * as Physijs from 'whitestormjs/physics/index';
+import {Component, MeshComponent, PhysicsComponent, extend, Loop} from 'whs';
+import * as Physijs from 'whs/lib/physics/index';
 
-class <%= component %> extends Shape {
-  constructor(params = {}) {
-    super(params, 'sphere');
-
-    extend(params.geometry, {
+@PhysicsComponent
+@MeshComponent
+class <%= component %> extends Component {
+  static defaults = {
+    geometry: {
       radius: 1,
       segmentA: 32,
       segmentB: 32
-    });
+    }
+  };
+
+  constructor(params = {}) {
+    super(params, <%= component %>.defaults, <%= component %>.instructions);
 
     this.build(params);
     super.wrap();

@@ -77,7 +77,7 @@ gulp.task('build:clean', function (callback) {
 // VENDOR
 gulp.task('vendor', (callback) => {
   gulp.src('./node_modules/whs/build/whitestorm.js')
-    .pipe(gulp.dest('./vendor/'));
+    .pipe(gulp.dest('./whs/'));
 });
 <% } %>
 // ERRORS
