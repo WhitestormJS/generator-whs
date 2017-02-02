@@ -22,13 +22,19 @@ module.exports = class extends Generator {
     }]).then((answers) => {
       this.log('Output filename', answers.name);
       this.log('Keyword', answers.key);
-      this.outputName = answers.name;
+      this.filename = answers.name;
+      this.keyword = answers.key;
     });
   }
 
   writing() {
-    this.fs.copy(this.templatePath('**/*'), this.destinationPath(), {filename: this.outputName});
-      this.fs.copy(this.templatePath('**/.*'), this.destinationPath());
+    const config = {
+      filename: this.filename,
+      keyword: this.keyword
+    };
+
+    this.fs.copyTpl(this.templatePath('**/*'), this.destinationPath(), config);
+    this.fs.copyTpl(this.templatePath('**/.*'), this.destinationPath(), config);
   }
 
 	install() {

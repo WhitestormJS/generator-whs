@@ -5,7 +5,7 @@
     "start": "webpack-dev-server"
   },
   "keywords": [
-    "whs-<%= type %>"
+    "whs-<%= keyword %>"
   ],
   "devDependencies": {
     "babel": "^6.5.2",
