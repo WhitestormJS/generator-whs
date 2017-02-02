@@ -17,7 +17,7 @@ export default {
   target: 'web',
   output: {
     path: path.join(__dirname, './build/'),
-    filename: 'BasicSphere.js',
+    filename: '<%= filename %>',
     libraryTarget: 'umd',
     library: 'BasicSphere'
   },
